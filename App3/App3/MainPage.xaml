@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App3"
+             x:Class="App3.MainPage">
+
+
+    <StackLayout Margin="16" Padding="40">
+        <!-- Place new controls here -->
+
+    
+
+        <local:ColorLabel x:Name="Label1"
+            Text="Welcome to Xamarin.Forms!" 
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+           HorizontalOptions="Center"
+           VerticalOptions="Start" />
+        <StackLayout Margin="0,40,0,40" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+            <Label x:Name="LatitudeLabel" Margin="0,0,0,10" Text="Latitud" HorizontalOptions="StartAndExpand" VerticalOptions="Start"/>
+            <Label x:Name="LongitudeLabel" Margin="0,0,0,20" Text="Longitud" HorizontalOptions="StartAndExpand" VerticalOptions="Start"/>
+            <Label x:Name="IdLabel" Text="Device ID" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+        </StackLayout>
+        <Entry x:Name="NameEntry" Placeholder="Ingresar nombre" MinimumWidthRequest="100" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <Entry.Effects>
+                <local:EntryKeyEffect KeyBoardText="Siguiente"/>
+            </Entry.Effects>
+        </Entry>
+        <Entry x:Name="SurnameEntry" Placeholder="Ingresar nombre" MinimumWidthRequest="100" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <Entry.Effects>
+                <local:EntryKeyEffect KeyBoardText="Listo"/>
+            </Entry.Effects>
+        </Entry>
+
+
+        <Button x:Name="Button1"
+                Clicked="Button1_Clicked"
+                Text="Clickeame!"
+                HorizontalOptions="Center"
+                VerticalOptions="End"/>
+
+    </StackLayout>
+
+</ContentPage>
